@@ -21,8 +21,6 @@
 <body>
   <!-- navbar -->
   <nav class="nav" id="nav">
- 
-
     </div>
         <div class="nav-center">
       <!-- nav header -->
@@ -93,14 +91,7 @@
       <article class="bio-info">
         <div class="underline"></div>
         <h1> hi, i'm christine</h1>
-        <div class="bio-wrapper">
-        <div class="bio-static-txt">a</div>
-        <ul class="bio-dynamic-txts">
-          <li><span>Team Leader.</span></li>
-          <li><span>FullStack Developer.</span></li>
-          <li><span>Customer Support Specialist.</span></li>
-        </ul>
-        </div>
+        <h2>a <span class='auto-input'></span></h2>
         <div>
         <a href="Images/ChristineTaylorResumetech.pdf" class="btn bio-btn">download cv</a>
         </div>
@@ -410,5 +401,14 @@
     </footer>
 
     <script src="./js/app.js"></script>
-  </body>
+   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+   <script>
+    let typed = new Typed('.auto-input', {
+      strings: ['Full Stack Web Developer', 'Customer Support Specialist', 'Team Leader'],
+      typeSpeed: 100,
+      backSpeed: 100,
+      loop: true
+    })
+   </script>
+    </body>
 </html>
