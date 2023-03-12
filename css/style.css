@@ -220,7 +220,7 @@ Navbar
 }
 @media screen and (min-width: 768px) {
   .nav {
-    background: var(--clr-primary-10);
+    background: url("/Users/christinetaylor/Documents/Christine-Portofolio/Images/pawel-czerwinski-QY5U8JD3-tk-unsplash.jpg");
   }
   .nav-btn {
     display: none;
@@ -350,6 +350,8 @@ Bio
 ===============
 */
 /* underline added to globals */
+
+
 .bio .underline{
   margin-bottom: 0.5rem;
   margin-left: 0;
@@ -358,9 +360,67 @@ Bio
   display: none
 }
 .bio {
-  background: var(--clr-primary-10)
-  
+  background: var(--clr-white) 
 }
+
+.bio-wrapper{
+  display: inline-flex;
+}
+
+.bio-wrapper .bio-static-txt{
+  color: var(--clr-grey-1);
+  font-size: 50px;
+  font-weight: 500;
+}
+
+.bio-wrapper .bio-dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+
+
+.bio-dynamic-txts li {
+  color:hsl(308, 58%, 60%);
+  list-style: none;
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 6s steps(3) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+    
+  }
+}
+
+
+.bio-dynamic-txts li span{
+  position: relative;
+}
+
+.bio-dynamic-txts li span::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+border-left: 2px solid hsl(308, 58%, 60%);
+animation: typing 1.5s  infinite;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 =35px 0 35px;
+  }
+}
+
 .bio-center {
   min-height: calc(100vh - 5rem);
   display: grid;
@@ -395,6 +455,7 @@ Bio
     top: 2rem;
     right: -2rem;
     border-radius: var(--radius);
+     background: url("/Users/christinetaylor/Documents/Christine-Portofolio/Images/pawel-czerwinski-QY5U8JD3-tk-unsplash.jpg");
   } 
   
 
